@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/6a79530112.js" crossorigin="anonymous"></script>
+  <!-- Material Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <title>Cards</title>
+</head>
+<body class="grey darken-4">
+  <div class="container">
+    <h1 class="amber-text text-lighten-3">Cards</h1>
+
+    <div class="row">
+      <div class="col s12 m6">
+        <!-- Simple card without title -->
+        <div class="card">
+          <div class="card-content">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam repudiandae, atque quo incidunt harum quam?</p>
+          </div>
+        </div>
+        <!-- Add color -->
+        <div class="card red darken-2">
+          <div class="card-content white-text">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam repudiandae, atque quo incidunt harum quam?</p>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m6">
+        <div class="card">
+          <div class="card-content">
+            <span class="card-title">Card With Title</span>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam repudiandae, atque quo incidunt harum quam?</p>
+            <!-- Add Links -->
+            <div class="card-action">
+              <a href="grid.html">Read More</a>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+
+<div class="row">
+  <div class="col s12 m6">
+    <!-- Card Image -->
+    <div class="card">
+      <div class="card-image">
+        <img src="images/webDesign.jpg" alt="">
+        <span class="card-title">Web Design</span>
+      </div>
+      <div class="card-content">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, reprehenderit!</p>
+        <div class="card-action">
+          <a href="grid.html">Read More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Card image with floating button -->
+  <div class="col s12 m6">
+    <div class="card">
+      <div class="card-image">
+        <img src="images/web.jpg" alt="">
+        <span class="card-title">Web Development</span>
+        <a href="" class="btn-floating halfway-fab waves-effect waves-light deep-purple">
+          <i class="material-icons">add</i>
+        </a>
+      </div>
+      <div class="card-content">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, reprehenderit!</p>
+        <div class="card-action">
+          <a href="grid.html">Read More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col s12 m6">
+    <h2 class="header amber-text text-lighten-3">Horizontal Card</h2>
+    <div class="card horizontal">
+      <div class="card-image">
+        <img src="images/web.jpg">
+      </div>
+      <div class="card-stacked">
+        <div class="card-content">
+          <p>I am a very simple card. I am good at containing small bits of information.</p>
+        </div>
+        <div class="card-action">
+          <a href="#">This is a link</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col s12 m6">
+    <div class="card">
+      <div class="card-image waves-effect waves-block waves-light">
+        <img class="activator" src="images/webDesign.jpg">
+      </div>
+      <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+        <p><a href="#">This is a link</a></p>
+      </div>
+      <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col s12 m6">
+    <!-- Tabbed Card -->
+    <div class="card">
+      <div class="card-content">
+        <span class="card-title">Tabbed Card</span>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, voluptas dolorum nihil expedita quis commodi repellat modi eos, excepturi praesentium possimus dignissimos quam obcaecati! Tenetur tempore ducimus quam assumenda tempora.</p>
+      </div>
+      <div class="card-tabs">
+        <ul class="tabs tabs-fixed-width">
+          <li class="tab">
+            <a href="#tab1">HTML</a>
+          </li>
+          <li class="tab">
+            <a href="#tab2">CSS</a>
+          </li>
+          <li class="tab">
+            <a href="#tab3">JS</a>
+          </li>
+        </ul>
+      </div>
+      <div class="card-content">
+        <div id="tab1">This is the content for HTML</div>
+        <div id="tab2">This is the content for CSS</div>
+        <div id="tab3">This is the content for JS</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- End of container -->
+  </div>
+
+
+  <!-- Jquery CDN -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+   <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script>
+      // $(document).ready(function(){
+      //   $('.tabs').tabs();
+      // });
+
+      $(document).ready(function() {
+        $('.tabs').tabs();
+      });
+    </script>
+</body>
+</html>
