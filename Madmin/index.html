@@ -126,6 +126,113 @@
     </div>
   </section>
 
+  <!-- Section: Visitors -->
+  <section class="section section-visitor blue lighten-4">
+    <div class="row">
+      <div class="col s12 m6 l8">
+        <div class="card-panel">
+          <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+        </div>
+      </div>
+      <div class="col s12 m6 l4">
+        <!-- Latest Comments -->
+        <ul class="collection with-header latest-comments">
+          <li class="collection-header">
+            <h5>Latest Comments</h5>
+          </li>
+          <li class="collection-item avatar">
+            <img src="img/person1.jpg" alt="" class="circle">
+            <span class="title">Theodore Thiel</span>
+            <p class="truncate">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt assumenda soluta veniam aperiam cumque suscipit, eos voluptate reprehenderit ipsa voluptates in quos velit, explicabo tempora iste esse molestiae corrupti tenetur.</p>
+            <a href="" class="approve green-text">Approved</a> |
+            <a href="" class="deny red-text">Deny</a>
+          </li>
+          <li class="collection-item avatar">
+            <img src="img/person2.jpg" alt="" class="circle">
+            <span class="title">Pete Lind</span>
+            <p class="truncate">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt assumenda soluta veniam aperiam cumque suscipit, eos voluptate reprehenderit ipsa voluptates in quos velit, explicabo tempora iste esse molestiae corrupti tenetur.</p>
+            <a href="" class="approve green-text">Approved</a> |
+            <a href="" class="deny red-text">Deny</a>
+          </li>
+          <li class="collection-item avatar">
+            <img src="img/person3.jpg" alt="" class="circle">
+            <span class="title">Lois Raynor</span>
+            <p class="truncate">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt assumenda soluta veniam aperiam cumque suscipit, eos voluptate reprehenderit ipsa voluptates in quos velit, explicabo tempora iste esse molestiae corrupti tenetur.</p>
+            <a href="" class="approve green-text">Approved</a> |
+            <a href="" class="deny red-text">Deny</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: Recent Posts & Todos -->
+  <section class="section section-recent">
+   <div class="row">
+     <div class="col s12 m6 l8">
+       <div class="card">
+         <div class="card-content">
+           <span class="card-title">Recent Posts</span>
+           <table class="striped">
+             <thead>
+               <tr>
+                 <th>Title</th>
+                 <th>Category</th>
+                 <th></th>
+               </tr>
+             </thead>
+             <tbody>
+               <tr>
+                 <td>Post One</td>
+                 <td>Web Design</td>
+                 <td>
+                   <a href="details.html" class="btn blue lighten-2">Details</a>
+                 </td>
+               </tr>
+               <tr>
+                 <td>Post Two</td>
+                 <td>Web Developement</td>
+                 <td>
+                   <a href="details.html" class="btn blue lighten-2">Details</a>
+                 </td>
+               </tr>
+               <tr>
+                 <td>Post three</td>
+                 <td>Flutter Development</td>
+                 <td>
+                   <a href="details.html" class="btn blue lighten-2">Details</a>
+                 </td>
+               </tr>
+             </tbody>
+           </table>
+         </div>
+       </div>
+     </div>
+     <div class="col s12 m6 l4">
+       <div class="card">
+         <div class="card-content">
+           <span class="card-title">Quick Todos</span>
+           <form id="todo-form">
+             <div class="input-field">
+               <input type="text" id="todo" placeholder="Add Todo...">
+             </div>
+           </form>
+           <ul class="collection todos">
+             <li class="collection-item">
+               <div>Todo One
+                <a href="!#" class="secondary-content delete">
+                  <i class="material-icons">close</i>
+                 </a>
+               </div>
+               
+             </li>
+           </ul>
+         </div>
+       </div>
+     </div>
+   </div>
+  </section>
+
   <!-- Preloader -->
   <div class="loader preloader-wrapper big active">
     <div class="spinner-layer spinner-blue-only">
@@ -146,17 +253,62 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
    <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- CanvaJS CDN -->
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <!-- Canva JS -->
+    <script src="js/chart.js"></script>
 
     <script>
       $('.section').hide();
      
       setTimeout(function() {
         $(document).ready(function(){
+          // Sidenav
           $('.sidenav').sidenav();
           // Show Section
           $('.section').fadeIn();
           // Hide preloader
           $('.loader').fadeOut();
+          // Counter
+          $('.count').each(function() {
+            $(this).prop('Counter', 0).animate({
+              Counter: $(this).text()
+            }, {
+              duration: 1000,
+              easing: 'swing',
+              step: function(now) {
+               $(this).text(Math.ceil(now));
+              }
+            });
+          });
+          // Comments - Approved & Deny
+          $('.approve').click(function(e) {
+            M.toast({
+              html: 'Comment Approved!',
+              displayLength: 2000})
+            e.preventDefault();
+          });
+          $('.deny').click(function(e) {
+            M.toast({
+              html: 'Comment Denied!',
+              displayLength: 2000})
+            e.preventDefault();
+          });
+          // Quick todos
+          $('#todo-form').submit(function(e) {
+            console.log($('#todo').val());
+            const output = `
+            <li class="collection-item">
+               <div>${$('#todo').val()}
+                <a href="!#" class="secondary-content delete">
+                  <i class="material-icons">close</i>
+                 </a>
+               </div>  
+            </li>`;
+            $('.todos').append(output);
+
+            e.preventDefault();
+          });
         });
       }, 1000);
       

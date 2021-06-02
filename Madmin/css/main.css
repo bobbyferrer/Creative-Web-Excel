@@ -3,3 +3,8 @@
   top: 40%;
   left: 47%;
 }
+
+div.toast {
+  background: lightblue;
+  color: white;
+}
