@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Material Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Custom Css -->
+  <link rel="stylesheet" href="css/main.css">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  
+  <title>Posts</title>
+</head>
+<body class="grey lighten-4">
+  <nav class="blue darken-2">
+    <div class="container">
+      <div class="nav-wrapper">
+        <a href="" class="brand-logo">Madmin</a>
+        <a href="#" data-target="slide-out" class="button-collapse show-on-large right sidenav-trigger">
+          <i class="material-icons">menu</i>
+        </a>
+        <ul class="right hide-on-med-and-down">
+          <li>
+            <a href="index.html">Dashboard</a>
+          </li>
+          <li class="active">
+            <a href="posts.html">Posts</a>
+          </li>
+          <li>
+            <a href="categories.html">Categories</a>
+          </li>
+          <li>
+            <a href="comment.html">Comment</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Sidenav -->
+  <ul id="slide-out" class="sidenav">
+    <li>
+      <div class="user-view">
+        <div class="background">
+          <img src="img/ocean.jpg" alt="">
+        </div>
+        <a href="#">
+          <img src="img/person1.jpg" alt="" class="circle">
+        </a>
+        <a href="#">
+          <span class="name white-text">Joe Zemlak</span>
+        </a>
+        <a href="#">
+          <span class="email white-text">joe@gmail.com</span>
+        </a>
+      </div>
+    </li>
+    <li>
+      <a href="index.html">
+        <i class="material-icons">dashboard</i> Dashboard
+      </a>
+    </li>
+    <li>
+      <a href="posts.html">Posts</a>
+    </li>
+    <li>
+      <a href="categories.html">Categories</a>
+    </li>
+    <li>
+      <a href="comment.html">Comment</a>
+    </li>
+    <li>
+      <div class="divider"></div>
+    </li>
+    <li>
+      <a class="subheader">Account Controls</a>
+    </li>
+    <li>
+      <a href="login.html" class="waves-effect">Logout</a>
+    </li>
+  </ul>
+
+  <!-- Section: Posts -->
+  <section class="section section-posts grey lighten-4">
+   <div class="container">
+     <div class="row">
+       <div class="col s12">
+         <div class="card">
+           <div class="card-content">
+             <span class="card-title">Posts</span>
+             <table class="striped">
+               <thead>
+                 <tr>
+                   <th>Title</th>
+                   <th>Category</th>
+                   <th>Date Created</th>
+                   <th></th>
+                 </tr>
+               </thead>
+               <tbody>
+                 <tr>
+                   <td>Post One</td>
+                   <td>Web Development</td>
+                   <td>Jan 1, 2021</td>
+                   <td>
+                     <a href="" class="btn blue lighten-2">Details</a>
+                   </td>
+                 </tr>
+                 <tr>
+                   <td>Post Two</td>
+                   <td>Web Development</td>
+                   <td>Feb 12, 2021</td>
+                   <td>
+                     <a href="" class="btn blue lighten-2">Details</a>
+                   </td>
+                 </tr>
+                 <tr>
+                   <td>Post Three</td>
+                   <td>Flutter Development</td>
+                   <td>June 2, 2021</td>
+                   <td>
+                     <a href="" class="btn blue lighten-2">Details</a>
+                   </td>
+                 </tr>
+                 <tr>
+                   <td>Post Four</td>
+                   <td>Web Design</td>
+                   <td>Feb 12, 2021</td>
+                   <td>
+                     <a href="" class="btn blue lighten-2">Details</a>
+                   </td>
+                 </tr>
+                 <tr>
+                   <td>Post Five</td>
+                   <td>Flutter Development</td>
+                   <td>May 13, 2021</td>
+                   <td>
+                     <a href="" class="btn blue lighten-2">Details</a>
+                   </td>
+                 </tr>
+                 <tr>
+                   <td>Post Six</td>
+                   <td>Web Development</td>
+                   <td>April 10, 2021</td>
+                   <td>
+                     <a href="" class="btn blue lighten-2">Details</a>
+                   </td>
+                 </tr>
+               </tbody>
+             </table>
+           </div>
+           <div class="card-action">
+             <ul class="pagination">
+               <li class="disbabled">
+                 <a href="" class="blue-text"><i class="material-icons">chevron_left</i></a>
+               </li>
+               <li class="active blue lighten-2">
+                 <a href="!#" class="white-text">1</a>
+                </li>
+               <li class="waves-effect">
+                 <a href="!#" class="blue-text">2</a>
+                </li>
+               <li class="waves-effect">
+                 <a href="!#" class="blue-text">3</a>
+                </li>
+               <li class="waves-effect">
+                 <a href="!#" class="blue-text">4</a>
+                </li>
+               <li class="waves-effect">
+                 <a href="!#" class="blue-text">5</a>
+                </li>
+                <li class="waves-effect">
+                  <a href="!#" class="blue-text"><i class="material-icons">chevron_right</i></a>
+                </li>
+             </ul>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+  </section>
+
+
+<!-- Footer -->
+<footer class="section blue darken-2 white-text center">
+  <p>Madmin Panel Copyright &copy; 2021</p>
+</footer>
+
+<div class="fixed-action-btn">
+  <a href="#post-modal" class="btn-floating btn-large red modal-trigger">
+    <i class="material-icons">add</i>
+  </a>
+</div>
+<!-- Add post Modal -->
+<div id="post-modal" class="modal">
+  <div class="modal-content">
+    <h4>Add Posts</h4>
+    <form">
+      <div class="input-field">
+        <input type="text" id="title">
+        <label for="title">Title</label>
+      </div>
+      <div class="input-field">
+        <select>
+          <option value="" disabled selected>Select option</option>
+          <option value="1">Web Development</option>
+          <option value="2">Web Design</option>
+          <option value="3">Flutter Development</option>
+          <option value="4">Other</option>
+        </select>
+        <label>Category</label>
+      </div>
+      <div class="input-flied">
+        <textarea name="body" id="" class="materialize-textarea"></textarea>
+        <label for="body"></label>
+      </div>
+    </form>
+    <div class="modal-footer">
+      <a href="!#" class="modal-action modal-close btn blue white-text">Submit</a>
+    </div>
+  </div>
+</div>
+  <!-- Jquery CDN -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+   <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script>
+     $(document).ready(function() {
+       // Sidenav
+       $('.sidenav').sidenav();
+       // Modal init
+       $('.modal').modal();
+     });
+    </script>
+</body>
+</html>

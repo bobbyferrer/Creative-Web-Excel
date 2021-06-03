@@ -232,6 +232,107 @@
      </div>
    </div>
   </section>
+<!-- Footer -->
+  <footer class="section blue darken-2 white-text center">
+    <p>Madmin Panel Copyright &copy; 2021</p>
+  </footer>
+
+  <!-- Fixed Action Button -->
+  <div class="fixed-action-btn">
+    <a class="btn-floating btn-large red">
+      <i class="material-icons">add</i>
+    </a>
+    <ul>
+      <li>
+        <a href="#post-modal" class="modal-trigger btn-floating blue">
+          <i class="material-icons">mode_edit</i>
+        </a>
+      </li>
+      <li>
+        <a href="#category-modal" class="modal-trigger btn-floating blue">
+          <i class="material-icons">folder</i>
+        </a>
+      </li>
+      <li>
+        <a href="#user-modal" class="modal-trigger btn-floating blue">
+          <i class="material-icons">supervisor_account</i>
+        </a>
+      </li>
+    </ul>
+  </div>
+<!-- Add Post Modal -->
+<div id="post-modal" class="modal">
+  <div class="modal-content">
+    <h4>Add Posts</h4>
+    <form">
+      <div class="input-field">
+        <input type="text" id="title">
+        <label for="title">Title</label>
+      </div>
+      <div class="input-field">
+        <select>
+          <option value="" disabled selected>Select option</option>
+          <option value="1">Web Development</option>
+          <option value="2">Web Design</option>
+          <option value="3">Flutter Development</option>
+          <option value="4">Other</option>
+        </select>
+        <label>Category</label>
+      </div>
+      <div class="input-flied">
+        <textarea name="body" id="" class="materialize-textarea"></textarea>
+        <label for="body"></label>
+      </div>
+    </form>
+    <div class="modal-footer">
+      <a href="!#" class="modal-action modal-close btn blue white-text">Submit</a>
+    </div>
+  </div>
+</div>
+
+<!-- Add Category -->
+<div id="category-modal" class="modal">
+  <div class="modal-content">
+    <h4>Add Category</h4>
+    <form>
+      <div class="input-field">
+        <input type="text" id="title">
+        <label for="title">Title</label>
+      </div>
+      <div class="modal-footer">
+        <a href="!#" class="modal-action modal-close btn white-text">Submit</a>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Add User modal -->
+<div id="user-modal" class="modal">
+  <div class="modal-content">
+    <h4>Add Users</h4>
+    <form>
+      <div class="input-field">
+        <input type="text" id="name">
+        <label for="name">name</label>
+      </div>
+      <div class="input-field">
+        <input type="email" id="email">
+        <label for="email">Email</label>
+      </div>
+      <div class="input-field">
+        <input type="password" id="password">
+        <label for="password">Password</label>
+      </div>
+      <div class="input-field">
+        <input type="password" id="password2">
+        <label for="password2">Confirm Password</label>
+      </div>
+    </form>
+    <div class="modal-footer">
+      <a href="!#" class="modal-action modal-close btn blue white-text">Submit</a>
+    </div>
+  </div>
+</div>
 
   <!-- Preloader -->
   <div class="loader preloader-wrapper big active">
@@ -255,6 +356,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <!-- CanvaJS CDN -->
     <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <!-- ckEditor CDN -->
+    <script src="https://cdn.ckeditor.com/4.16.1/standard/ckeditor.js"></script>
     <!-- Canva JS -->
     <script src="js/chart.js"></script>
 
@@ -309,6 +412,14 @@
 
             e.preventDefault();
           });
+          // Floating Action Button
+          $('.fixed-action-btn').floatingActionButton();
+          // Modal init
+          $('.modal').modal();
+          // Select init
+          $('select').formSelect();
+          // CKeditor init
+          CKEDITOR.replace('body');
         });
       }, 1000);
       
