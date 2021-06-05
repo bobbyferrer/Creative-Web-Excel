@@ -1,7 +1,7 @@
 .loader {
-  position: absolute;
-  top: 40%;
-  left: 47%;
+  position: absolute !important;
+  top: 40% !important;
+  left: 47% !important;
 }
 
 div.toast {
@@ -9,12 +9,14 @@ div.toast {
   color: white;
 }
 
-body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-  }
+.btn-extended {
+  display: block;
+  width: 80%;
+  margin: auto;
+  margin-top: 20px;
+}
 
-  /* main {
-    flex: 1 0 auto;
-  } */
+.login {
+  margin-top: 70px !important;
+  margin-bottom: 70px !important;
+}
